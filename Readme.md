@@ -13,10 +13,6 @@ hash_state = [0x12, 0x34, 0x56, 0x78, 0x9A, 0xBC, 0xDE, 0xF0]
 ```
 Because we start from these exact numbers and never use random number generators (like time or random modules), the math will always calculate the exact same final result for the same input word.
 
----
-**[SCREENSHOT 1 GOES HERE]**
-*What to take a screenshot of:* Take a screenshot of the top half of the Python code (`custom_hash.py`). Make sure it clearly shows the `hash_state` variable and the `data = input_string.encode('utf-8')` section. This proves your code handles the deterministic starting state.
----
 
 ## 3. The Core Hash Loop (The 4 Components)
 The code takes the user's string, cuts it into 8-byte blocks, and loops over them, applying mathematical operations. 
@@ -59,8 +55,3 @@ block = [
     block[3], block[2], block[1], block[4]
 ]
 ```
-
----
-**[SCREENSHOT 2 GOES HERE]**
-*What to take a screenshot of:* Run the Python script in your terminal (using `python custom_hash.py`). Take a screenshot of the terminal window showing the final output where it prints `Input: 'CyberSecurity'` and the resulting `Output: 512da...`. This proves that your custom hash algorithm successfully works and outputs a valid 16-character hexadecimal hash.
----
